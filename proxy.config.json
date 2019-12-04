@@ -1,0 +1,14 @@
+{
+  "/event": {
+    "target": "http://localhost:9200",
+    "changeOrigin": true,
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/eventinfo": {
+    "target": "http://localhost:9200",
+    "changeOrigin": true,
+    "secure": false,
+    "logLevel": "debug"
+  }
+}

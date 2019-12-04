@@ -1,0 +1,32 @@
+<!--//// pour ignore l'affichage de sidemenu////////// -->
+<ion-menu [swipeGesture]="false"></ion-menu>
+<ion-content class="login-back">
+
+  <img class="image-ev" src="../../assets/EV.png">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()"  >
+
+      <ion-row color="primary" justify-content-center style="margin-top: 1.5%">
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+
+      <ion-label>Name</ion-label>
+      <ion-input formControlName="name" type="text" ></ion-input>
+
+
+      <ion-label>Username</ion-label>
+    <ion-input type="text"  formControlName="username"></ion-input>
+
+    <ion-label>Email</ion-label>
+    <ion-input type="text"  formControlName="email"></ion-input>
+
+    <ion-label>Password</ion-label>
+    <ion-input type="password"  formControlName="password"></ion-input>
+
+          <ion-button type="submit"  color="dark"  expand="block" routerLink="/login">Submit</ion-button>
+
+        </ion-col>
+      </ion-row>
+
+
+  </form>
+
+</ion-content>

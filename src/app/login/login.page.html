@@ -1,0 +1,34 @@
+<!--//// pour ignore l'affichage de sidemenu////////// -->
+<ion-menu [swipeGesture]="false"></ion-menu>
+<ion-content class="login-back">
+
+         <img class="image-ev" src="../../assets/EV.png">
+    <form [formGroup]="registerForm" (submit)="login()">
+        <ion-grid>
+            <ion-row color="primary" justify-content-center>
+                <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+                    <div text-center>
+                        <h3>Welcome</h3>
+                    </div>
+                    <div padding>
+                        <ion-item>
+                            <ion-input formControlName="email" type="email" placeholder="your@email.com" ></ion-input>
+                        </ion-item>
+                        <br>
+                        <ion-item>
+                            <ion-input formControlName="password" type="password" placeholder="Password" ></ion-input>
+                        </ion-item>
+                    </div>
+                    <div padding>
+                        <ion-button type="submit" style="background-color: #C28285; color: black; " color="rgb(139,69,19)" size="large" type="submit"  expand="block">Login</ion-button>
+                        <div text-center>
+                        <h6 style="position: center">Not Yet Registered</h6>
+                        <a routerLink="/registered" style="color: white">Signup</a>
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </form>
+
+</ion-content>
