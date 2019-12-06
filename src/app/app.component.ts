@@ -17,24 +17,25 @@ export class AppComponent {
       icon: 'md-albums'
     },
     {
-      title: 'Add new',
+      title: 'Add new Event',
       url: '/add-event',
       icon: 'add-circle'
     },
     {
       title: 'Close List Event',
-      url: '/liste-eventtout',
+      url: '/liste-eventout',
       icon: 'flame'
     },
-    {
-      title: 'News Events',
-      url: '/news-event',
-      icon: 'flame'
-    },
+   
     {
       title: 'Calendar',
       url: '/calendar',
       icon: 'calendar'
+    },
+    {
+      title: 'Logout',
+      url: '/login',
+      icon: 'md-log-out'
     },
 
   ];

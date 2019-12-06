@@ -1,0 +1,25 @@
+.welcome-card img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+.vie{
+  background-image: url("../../assets/back1.jpg");
+}
+:root {
+  --ion-safe-area-top: 20px;
+  --ion-safe-area-bottom: 22px;
+}
+ion-toolbar {
+  //--background: var(--ion-color-primary);
+  color: #1e2023;
+  //--ion-background-color: #D4AF37;
+  --ion-background-color: #C28285;
+
+}
+
+app-home {
+  ion-content {
+    --background: url("../../assets/backhome.jpg") no-repeat center center / cover;
+  }
+
+}

@@ -12,7 +12,8 @@ background-image: url("../../assets/back1.jpg");
 ion-toolbar {
   //--background: var(--ion-color-primary);
   color: #1e2023;
-  --ion-background-color: #D4AF37;
+  //--ion-background-color: #D4AF37;
+  --ion-background-color: #C28285;
 
 }
 
@@ -20,4 +21,16 @@ app-home {
   ion-content {
     --background: url("../../assets/backhome.jpg") no-repeat center center / cover;
   }
+
+}
+
+.card-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 5px;
+  line-height: 1.5;
+  background-color: rgba(255, 255, 255, 0.6);
 }

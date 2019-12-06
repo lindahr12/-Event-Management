@@ -15,13 +15,13 @@ export class EventService {
   }
   all()
   {
-    let url = '/event/user/_search';
+    let url = '/eventinfo/event/_search';
     return this.http.get(url, {headers: this.header});
   }
 
   addevent(event)
   {
-    let url='/eventinfo/info';
+    let url='/eventinfo/event';
     return this.http.post(url, {"name":event.name,"description":event.description,"date":event.date,"organizer":event.organizer,"email_event":event.email_event,"phonenumber":event.phonenumber});
 
   }

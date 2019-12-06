@@ -1,9 +1,27 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>calendar</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Calander
+
+    </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
+    <calendar [eventSource]="eventSource" [markDisabled]="markDisabled"
+              [calendarMode]="calendar.mode" [currentDate]="calendar.currentDate"
+              (onCurrentDateChanged)="onCurrentDateChanged($event)"
+              (onEventSelected)="onEventSelected($event)"
+              (onTitleChanged)="onViewTitleChanged($event)"
+              (onTimeSelected)="onTimeSelected($event)" step="30">
+    </calendar>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="showHideForm()">
+      <ion-icon  name="add"></ion-icon>
+
+    </ion-fab-button>
+  </ion-fab>
 
 </ion-content>
