@@ -25,19 +25,19 @@ export class EventService {
     return this.http.post(url, {"name":event.name,"description":event.description,"date":event.date,"organizer":event.organizer,"email_event":event.email_event,"phonenumber":event.phonenumber});
 
   }
-  getid(userid)
+  getid(eventid)
   {
-    let url = '/event/user/'+userid;
+    let url = '/eventinfo/event/'+eventid;
     return this.http.get(url, {headers: this.header});
   }
-  update(userid,user)
+  update(eventid,event)
   {
-    let url='/event/user/'+userid;
-    return this.http.post(url,user);
+    let url='/eventinfo/event/'+eventid;
+    return this.http.post(url,event);
   }
 
-  remove(userid) {
-    let url='/event/user/'+userid;
+  remove(eventid) {
+    let url='/eventinfo/event/'+eventid;
     return this.http.delete(url);
   }
 

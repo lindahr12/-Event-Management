@@ -27,3 +27,14 @@ ion-input
 ion-item{
   background-color: transparent;
 }
+.login-back{
+  ion-label{
+    color:darkgoldenrod;
+    font-size: 1.5em;
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: red;
+      opacity: 1; /* Firefox */
+    }
+  }
+
+}

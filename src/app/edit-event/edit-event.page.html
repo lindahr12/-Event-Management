@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>edit-event</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="registerForm" (ngSubmit)="edit()">
+
+    <ion-row  justify-content-center>
+      <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+
+        <ion-list class="az">
+          <ion-item >
+            <ion-label position="stacked">EVENT NAME</ion-label>
+
+            <ion-input formControlName="name" type="text" value="{{name}}">
+            </ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">DESCRIPTION</ion-label>
+            <ion-input formControlName="description" type="text" value="{{description}}">
+            </ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked" >DATE</ion-label>
+            <ion-input formControlName="date" type="date" value="{{date}}">
+            </ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked" >ORGANIZER</ion-label>
+            <ion-input formControlName="organizer" type="text" value="{{organizer}}">
+            </ion-input>
+          </ion-item>
+
+
+          <ion-item>
+            <ion-label position="stacked" >EMAIL EVENT</ion-label>
+
+            <ion-input  formControlName="email_event" type="text" value="{{email_event}}" >
+
+            </ion-input>
+          </ion-item>
+
+
+          <ion-item>
+            <ion-label position="stacked" >PHONE NUMBER</ion-label>
+            <ion-input  formControlName="phonenumber" type="text" value="{{phonenumber}}">
+            </ion-input>
+          </ion-item>
+
+          <ion-row class="signin">
+            <ion-col>
+              <ion-button type="submit" style="background-color: #C28285; color: black; margin-left: 40% " color="rgb(139,69,19)" size="med" type="submit"  expand="block">Submit</ion-button>
+
+            </ion-col>
+          </ion-row>
+
+        </ion-list>
+      </ion-col>
+
+    </ion-row>
+
+
+
+
+  </form>
+
+</ion-content>

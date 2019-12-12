@@ -38,6 +38,8 @@ export class AppComponent {
       icon: 'md-log-out'
     },
 
+ 
+
   ];
 
   constructor(

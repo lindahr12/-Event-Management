@@ -10,6 +10,7 @@ import { NgCalendarModule  } from 'ionic2-calendar';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {HttpClient, HttpClientModule, HttpHandler} from '@angular/common/http';
+import {IonicStorageModule} from "@ionic/storage";
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +20,8 @@ import {HttpClient, HttpClientModule, HttpHandler} from '@angular/common/http';
     IonicModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
-    NgCalendarModule
+    NgCalendarModule,
+    IonicStorageModule.forRoot()
   ],
   providers: [
     StatusBar,

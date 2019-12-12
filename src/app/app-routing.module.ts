@@ -38,6 +38,14 @@ const routes: Routes = [
   {
     path: 'registered',
     loadChildren: () => import('./registered/registered.module').then( m => m.RegisteredPageModule)
+  },
+  {
+    path: 'edit-event',
+    loadChildren: () => import('./edit-event/edit-event.module').then( m => m.EditEventPageModule)
+  },
+  {
+    path: 'file',
+    loadChildren: () => import('./file/file.module').then( m => m.FilePageModule)
   }
 ];
 

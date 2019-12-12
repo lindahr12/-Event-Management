@@ -8,20 +8,27 @@
       <ion-row color="primary" justify-content-center style="margin-top: 1.5%">
         <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
 
-      <ion-label>Name</ion-label>
-      <ion-input formControlName="name" type="text" ></ion-input>
+       <ion-item style="--ion-background-color: rgba(0, 0, 0, 0);">
+            <ion-label>Name :</ion-label>
+      <ion-input formControlName="name" type="text" placeholder="enter your name" ></ion-input>
+            <ion-split-pane when="md"></ion-split-pane>
+       </ion-item>
+            <ion-item style="--ion-background-color:  rgba(0, 0, 0, 0);">
+
+            <ion-label>Username :</ion-label>
+    <ion-input type="text"  formControlName="username" placeholder="enter your username"></ion-input>
+            </ion-item>
+            <ion-item style="--ion-background-color:  rgba(0, 0, 0, 0);">
+            <ion-label>Email :</ion-label>
+    <ion-input type="text"  formControlName="email" placeholder="enter your email"></ion-input>
+            </ion-item>
+            <ion-item style="--ion-background-color: rgba(0, 0, 0, 0);">
+            <ion-label>Password :</ion-label>
+    <ion-input type="password"  formControlName="password" placeholder="enter your password" ></ion-input>
+            </ion-item>
 
 
-      <ion-label>Username</ion-label>
-    <ion-input type="text"  formControlName="username"></ion-input>
-
-    <ion-label>Email</ion-label>
-    <ion-input type="text"  formControlName="email"></ion-input>
-
-    <ion-label>Password</ion-label>
-    <ion-input type="password"  formControlName="password"></ion-input>
-
-          <ion-button type="submit"  color="dark"  expand="block" routerLink="/login">Submit</ion-button>
+            <ion-button type="submit"  color="dark"  expand="block" routerLink="/login">Submit</ion-button>
 
         </ion-col>
       </ion-row>

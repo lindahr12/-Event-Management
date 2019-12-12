@@ -3,6 +3,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {UserService} from "../user.service";
 import {ActivatedRoute} from "@angular/router";
 import {NavController} from "@ionic/angular";
+import {Storage} from '@ionic/storage';
 
 @Component({
   selector: 'app-login',
@@ -17,8 +18,9 @@ export class LoginPage implements OnInit {
   private name: any;
   private toastCtrl: any;
   private alertCtrl: any;
+    private maillogin: any;
 
-  constructor(public userservice: UserService, private formBuilder: FormBuilder, private activatedRoute: ActivatedRoute, public navctrl: NavController) {
+  constructor(public userservice: UserService,public storage: Storage, private formBuilder: FormBuilder, private activatedRoute: ActivatedRoute, public navctrl: NavController) {
   }
 
   ngOnInit() {
@@ -29,6 +31,10 @@ export class LoginPage implements OnInit {
       password: ['', Validators.required],
 
     });
+      this.storage.get('email').then((val) => {
+          this.maillogin =val;
+          console.log(this.maillogin);
+      });
   }
 
 
@@ -36,9 +42,14 @@ export class LoginPage implements OnInit {
         let formulairevalues = this.registerForm.value;
         this.userservice.login(formulairevalues).subscribe((res:any) => {
             let found= res.hits.hits;
+            //console.log(formulairevalues.email);
             if (found.length != 0){
               //  alert('founddddd');
                 this.navctrl.navigateRoot('/home');
+                this.storage.set("email",formulairevalues.email);
+                this.storage.get('email').then((val) => {
+                    console.log('Your email is', val);
+                });
 
             } else {
                 alert('not found');
